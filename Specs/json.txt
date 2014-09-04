@@ -1,0 +1,21 @@
+{
+  "from": 1,
+  "to": 2,
+  "total": 1407,
+  "currentPage": 1,
+  "totalPages": 704,
+  "queryTime": "0.003",
+  "totalTime": "0.008",
+  "partial": false,
+  "canonicalUrl": "/v1/products(name=\"iphone*\")?show=name,salePrice&format=json&apiKey=vf5ft65skvwfvyd5guj6npef",
+  "products": [
+    {
+      "name": "ADOPTED - Cushion Wrap Case for Apple® iPhone® 5 and 5s - Black/Rose Gold",
+      "salePrice": 39.99
+    },
+    {
+      "name": "ADOPTED - Cushion Wrap Case for Apple® iPhone® 5 and 5s - Black/Silver",
+      "salePrice": 39.99
+    }
+  ]
+}
