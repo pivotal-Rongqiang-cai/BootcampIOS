@@ -8,6 +8,7 @@
 
 #import "BestBuyTableViewController.h"
 #include "BestBuyParseData.h"
+#include "BestBuyDetailedViewController.h"
 
 static NSInteger const pageSize = 5;
 
@@ -33,13 +34,12 @@ static NSInteger const pageSize = 5;
     self.pageNumber = 1;
     self.parser = [[BestBuyParseData alloc] init];
     
-
-
-    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
+        NSString * encodedString = [self.productName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        
         NSString *urlStr = [NSMutableString stringWithFormat:@"http://api.remix.bestbuy.com/v1/products(name=%@*)?show=name,salePrice&format=json&pageSize=%i&page=%i&apiKey=vf5ft65skvwfvyd5guj6npef",
-                          self.productName, pageSize, self.pageNumber ];
+                          encodedString, pageSize, self.pageNumber ];
         NSURL * url = [NSURL URLWithString:urlStr];
         NSData* data = [NSData dataWithContentsOfURL:
                         url];
@@ -48,9 +48,13 @@ static NSInteger const pageSize = 5;
         self.resultList = [self.parser parse];
         
         dispatch_async(dispatch_get_main_queue(), ^{
+            if ([self.resultList count] == 0) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Results" message:@"No Results were found" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+                [alert show];
+            }
             // use resultList to update UI here
             [self.tableview reloadData];
-            
+
         });
     });
     
@@ -92,9 +96,45 @@ static NSInteger const pageSize = 5;
     }
     
     cell.textLabel.text = [self.resultList objectAtIndex:indexPath.row];
-    cell.textLabel.font = [UIFont systemFontOfSize:10.0];
+    cell.textLabel.font = [UIFont systemFontOfSize:14.0];
+    cell.textLabel.numberOfLines = 0;
+    cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.tableview.bounds.size.height / 6 ;
+}
+
+- (UIViewController*)loadAndPresentVCNamed:(NSString*)vcName
+                      fromStoryboardNamed:(NSString*)sbName;
+{
+    // 1. Get the storyboard
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:sbName bundle:nil];
+    
+    // 2. Edit the vcName if necessary (optional)
+    // If you don't have a separate items in your Storyboard w/ it's Storyboard ID
+    // set to "<vcName>_iPhone", remove the next 2 lines.
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+        vcName = [NSString stringWithFormat:@"%@_iPhone", vcName];
+    
+    // 3. Get the controller from the storyboard.
+    UIViewController *controller = (UIViewController *)
+    [storyboard instantiateViewControllerWithIdentifier:vcName];
+    
+    // 4. Present the vc and return it.
+    [self presentViewController:controller animated:YES completion:nil];
+    return controller;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([segue.identifier isEqualToString:@"tableItemToDetailedView"]){
+        BestBuyDetailedViewController *detailedViewController = (BestBuyDetailedViewController *)segue.destinationViewController;
+        
+        
+    }
 }
 
 
@@ -136,21 +176,26 @@ static NSInteger const pageSize = 5;
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    //UIViewController *detailedViewController = [storyboard instantiateViewControllerWithIdentifier:@"detailedViewController"];
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+    // <#DetailViewController#> *detailViewController = [[DetailViewController alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
     
     // Pass the selected object to the new view controller.
     
     // Push the view controller.
-    [self.navigationController pushViewController:detailViewController animated:YES];
+    //[self.navigationController pushViewController:detailedViewController animated:YES];
+    
+    [self performSegueWithIdentifier:@"tableItemToDetailedView" sender:self];
 }
-*/
+
 
 @end

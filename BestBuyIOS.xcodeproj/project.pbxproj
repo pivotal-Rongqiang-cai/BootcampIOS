@@ -34,6 +34,7 @@
 		2355BB0719B79A840097B84A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2355BB0619B79A840097B84A /* Main.storyboard */; };
 		2355BB0B19B8BC4A0097B84A /* BestBuySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2355BB0919B8BC4A0097B84A /* BestBuySearchViewController.m */; };
 		2355BB0C19B8BC4A0097B84A /* BestBuySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2355BB0A19B8BC4A0097B84A /* BestBuySearchViewController.xib */; };
+		236A3FDC19BA5C330047EC06 /* BestBuyDetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236A3FDB19BA5C330047EC06 /* BestBuyDetailedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		2355BB0819B8BC4A0097B84A /* BestBuySearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestBuySearchViewController.h; sourceTree = "<group>"; };
 		2355BB0919B8BC4A0097B84A /* BestBuySearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BestBuySearchViewController.m; sourceTree = "<group>"; };
 		2355BB0A19B8BC4A0097B84A /* BestBuySearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BestBuySearchViewController.xib; sourceTree = "<group>"; };
+		236A3FDA19BA5C330047EC06 /* BestBuyDetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestBuyDetailedViewController.h; sourceTree = "<group>"; };
+		236A3FDB19BA5C330047EC06 /* BestBuyDetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BestBuyDetailedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 				234DADE319B8BEF500EEA3E6 /* BestBuyTableViewController.h */,
 				234DADE419B8BEF500EEA3E6 /* BestBuyTableViewController.m */,
 				234DAE2119B8EAEF00EEA3E6 /* BestBuyParseData.h */,
+				236A3FDA19BA5C330047EC06 /* BestBuyDetailedViewController.h */,
+				236A3FDB19BA5C330047EC06 /* BestBuyDetailedViewController.m */,
 				234DAE2219B8EAEF00EEA3E6 /* BestBuyParseData.m */,
 				234DADE519B8BEF500EEA3E6 /* BestBuyTableViewController.xib */,
 				2355BB0919B8BC4A0097B84A /* BestBuySearchViewController.m */,
@@ -381,6 +386,7 @@
 				2355BAE819B794BD0097B84A /* AppDelegate.m in Sources */,
 				2355BB0B19B8BC4A0097B84A /* BestBuySearchViewController.m in Sources */,
 				2355BAE419B794BD0097B84A /* main.m in Sources */,
+				236A3FDC19BA5C330047EC06 /* BestBuyDetailedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -48,11 +48,30 @@
             </objects>
             <point key="canvasLocation" x="1155" y="106"/>
         </scene>
+        <!--Best Buy Detailed View Controller-->
+        <scene sceneID="aox-Dd-vAZ">
+            <objects>
+                <viewController id="7UH-MH-d4L" customClass="BestBuyDetailedViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="np8-rb-lXv"/>
+                        <viewControllerLayoutGuide type="bottom" id="vFw-Ze-MUH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ERy-Ed-LMV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="bMU-o4-F3c"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mct-fy-1hl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="106"/>
+        </scene>
         <!--Table View Controller - TableControl-->
         <scene sceneID="CxP-8W-hp5">
             <objects>
                 <tableViewController id="MMs-3w-ixd" userLabel="Table View Controller - TableControl" customClass="BestBuyTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NML-eV-NzU">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="NML-eV-NzU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,6 +84,7 @@
                     <navigationItem key="navigationItem" id="waP-gA-8aE"/>
                     <connections>
                         <outlet property="tableview" destination="NML-eV-NzU" id="V6R-AZ-Utq"/>
+                        <segue destination="7UH-MH-d4L" kind="push" identifier="tableItemToDetailedView" id="pG2-P8-Zw4"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qfs-gK-cNv" userLabel="First Responder" sceneMemberID="firstResponder"/>
