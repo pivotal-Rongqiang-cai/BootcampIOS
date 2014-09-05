@@ -9,6 +9,8 @@
 #import "BestBuyTableViewController.h"
 #include "BestBuyParseData.h"
 
+static NSInteger const pageSize = 5;
+
 @interface BestBuyTableViewController ()
 
 @end
@@ -36,8 +38,8 @@
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
-        NSString *urlStr = [NSMutableString stringWithFormat:@"http://api.remix.bestbuy.com/v1/products(name=%@*)?show=name,salePrice&format=json&pageSize=10&page=%i&apiKey=vf5ft65skvwfvyd5guj6npef",
-                          self.productName, self.pageNumber ];
+        NSString *urlStr = [NSMutableString stringWithFormat:@"http://api.remix.bestbuy.com/v1/products(name=%@*)?show=name,salePrice&format=json&pageSize=%i&page=%i&apiKey=vf5ft65skvwfvyd5guj6npef",
+                          self.productName, pageSize, self.pageNumber ];
         NSURL * url = [NSURL URLWithString:urlStr];
         NSData* data = [NSData dataWithContentsOfURL:
                         url];
