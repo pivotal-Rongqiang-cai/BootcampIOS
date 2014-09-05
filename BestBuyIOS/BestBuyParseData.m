@@ -26,7 +26,7 @@
 
         str = [dict valueForKey:@"name"];
         priceStr = [dict valueForKey:@"salePrice"];
-        str = [NSMutableString stringWithFormat:@"%@ %@",
+        str = [NSMutableString stringWithFormat:@"%@ $%@",
          str, priceStr];
         [self.items addObject:str];
     }

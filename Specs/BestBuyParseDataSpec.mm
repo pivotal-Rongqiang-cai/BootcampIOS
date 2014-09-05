@@ -23,7 +23,7 @@ describe(@"BestBuyParseData", ^{
     
     it(@"Parsing JsonStr", ^{
         NSMutableArray * resultList = [myParser parse];
-        [[resultList objectAtIndex:0] isEqualToString:@"ADOPTED - Cushion Wrap Case for Apple® iPhone® 5 and 5s - Black/Rose Gold 39.99"] should be_truthy;
+        [[resultList objectAtIndex:0] isEqualToString:@"ADOPTED - Cushion Wrap Case for Apple® iPhone® 5 and 5s - Black/Rose Gold $39.99"] should be_truthy;
     });
 });
 

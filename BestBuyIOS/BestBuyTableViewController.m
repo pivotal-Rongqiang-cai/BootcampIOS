@@ -15,6 +15,7 @@
 
 @implementation BestBuyTableViewController
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -30,6 +31,9 @@
     self.pageNumber = 1;
     self.parser = [[BestBuyParseData alloc] init];
     
+
+
+    
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
         NSString *urlStr = [NSMutableString stringWithFormat:@"http://api.remix.bestbuy.com/v1/products(name=%@*)?show=name,salePrice&format=json&pageSize=10&page=%i&apiKey=vf5ft65skvwfvyd5guj6npef",
@@ -39,11 +43,11 @@
                         url];
         self.parser.json = data;
         
-        NSMutableArray * resultList = [self.parser parse];
+        self.resultList = [self.parser parse];
         
         dispatch_async(dispatch_get_main_queue(), ^{
             // use resultList to update UI here
-            
+            [self.tableview reloadData];
             
         });
     });
@@ -63,26 +67,34 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.resultList count];
 }
 
-/*
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier /*forIndexPath:indexPath*/];
     
     // Configure the cell...
+    if (nil == cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
+    }
+    
+    cell.textLabel.text = [self.resultList objectAtIndex:indexPath.row];
+    cell.textLabel.font = [UIFont systemFontOfSize:10.0];
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
