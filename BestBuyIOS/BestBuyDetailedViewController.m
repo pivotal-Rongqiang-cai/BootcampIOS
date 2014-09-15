@@ -7,12 +7,32 @@
 //
 
 #import "BestBuyDetailedViewController.h"
-
+#import "AFImageRequestOperation.h"
+@import Photos;
 @interface BestBuyDetailedViewController ()
+@property (strong, nonatomic) IBOutlet UIImageView *image;
 
 @end
 
 @implementation BestBuyDetailedViewController
+- (IBAction)addImageToLibrary:(id)sender {
+    [[PHPhotoLibrary sharedPhotoLibrary] performChanges:^{
+
+        PHAssetChangeRequest *request = [PHAssetChangeRequest creationRequestForAssetFromImage:self.image.image];
+
+        //request.contentEditingOutput = contentEditingOutput;
+
+    } completionHandler:^(BOOL success, NSError *error) {
+
+        if (!success) {
+
+            NSLog(@"Error: %@", error);
+            
+        }
+        
+    }];
+
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +47,21 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSURLRequest *request = [NSURLRequest requestWithURL:self.imageUrl];
+    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    //requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
+    [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Response: %@", responseObject);
+        self.image.image = [UIImage imageWithData:responseObject];
+        self.image.contentMode = UIViewContentModeScaleAspectFit;
+        self.image.frame = CGRectMake(self.image.frame.origin.x, self.image.frame.origin.y,
+                                     self.image.image.size.width, self.image.image.size.height);
+
+
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Image error: %@", error);
+    }];
+    [requestOperation start];
 }
 
 - (void)didReceiveMemoryWarning

@@ -7,26 +7,25 @@
 //
 
 #import "BestBuyParseData.h"
-
+#include "BestBuyResult.h"
 @implementation BestBuyParseData
 
 - (NSMutableArray * ) parse
 {
-    NSString* newStr = [[NSString alloc] initWithData:self.json encoding:NSUTF8StringEncoding];
 
-    NSError * error = nil;
-    NSDictionary * mainJsonDictionary = [NSJSONSerialization JSONObjectWithData : self.json options: NSJSONReadingMutableContainers error: &error];
-    NSArray * products = [ mainJsonDictionary objectForKey:@"products" ];
+    NSArray * products = [ self.mainJsonDictionary objectForKey:@"products" ];
     NSMutableString * str;
     NSMutableString * priceStr;
-    //NSInteger pageNum = [[ mainJsonDictionary objectForKey:@"totalPages"] intValue] ;
     self.items = [NSMutableArray arrayWithCapacity:0];
     for (NSDictionary * dict in products) {
         str = [dict valueForKey:@"name"];
         priceStr = [dict valueForKey:@"salePrice"];
         str = [NSMutableString stringWithFormat:@"%@ $%@",
          str, priceStr];
-        [self.items addObject:str];
+        BestBuyResult * result = [[BestBuyResult alloc] init];
+        result.name = str;
+        result.imageUrl = [NSURL URLWithString:[dict valueForKey:@"image"]];
+        [self.items addObject:result];
     }
     return self.items;
     

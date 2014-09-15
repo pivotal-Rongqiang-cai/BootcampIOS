@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BestBuyDetailedViewController : UIViewController
-//@property (strong, nonatomic)
+@property (strong, nonatomic) NSURL * imageUrl;
 @end

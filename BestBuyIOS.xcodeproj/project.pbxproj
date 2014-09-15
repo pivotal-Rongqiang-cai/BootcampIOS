@@ -35,6 +35,23 @@
 		2355BB0B19B8BC4A0097B84A /* BestBuySearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2355BB0919B8BC4A0097B84A /* BestBuySearchViewController.m */; };
 		2355BB0C19B8BC4A0097B84A /* BestBuySearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2355BB0A19B8BC4A0097B84A /* BestBuySearchViewController.xib */; };
 		236A3FDC19BA5C330047EC06 /* BestBuyDetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 236A3FDB19BA5C330047EC06 /* BestBuyDetailedViewController.m */; };
+		42469ACA19C23CA300FA8A5C /* BestBuyResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 42469AC619C2384E00FA8A5C /* BestBuyResult.m */; };
+		42469ACB19C2425200FA8A5C /* BestBuyResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 42469AC619C2384E00FA8A5C /* BestBuyResult.m */; };
+		42469ACC19C2427000FA8A5C /* BestBuyResult.h in Sources */ = {isa = PBXBuildFile; fileRef = 42469AC719C2391E00FA8A5C /* BestBuyResult.h */; };
+		4251095819C0CE06003F8D7E /* ExtensionIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 429FC1B519BE4C61009F7067 /* ExtensionIcon.png */; };
+		429FC1B619BE4C61009F7067 /* ExtensionIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 429FC1B519BE4C61009F7067 /* ExtensionIcon.png */; };
+		42A074D619C0FE8400BEFF96 /* BestBuyPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A074D519C0FE8400BEFF96 /* BestBuyPhotoViewController.m */; };
+		42A074DD19C1EFFA00BEFF96 /* MyCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A074DC19C1EFFA00BEFF96 /* MyCollectionCell.m */; };
+		42CE3FC219BE49B900D68FDA /* Action.js in Resources */ = {isa = PBXBuildFile; fileRef = 42CE3FC119BE49B900D68FDA /* Action.js */; };
+		42EFABC919BF95EA007578BA /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EFABC619BF95EA007578BA /* HTMLNode.m */; };
+		42EFABCA19BF95EA007578BA /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 42EFABC819BF95EA007578BA /* HTMLParser.m */; };
+		42EFABCC19BF96CA007578BA /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 42EFABCB19BF96CA007578BA /* libxml2.dylib */; };
+		42F4670119BE3A7D000EE29A /* BestBuyParseData.h in Sources */ = {isa = PBXBuildFile; fileRef = 234DAE2119B8EAEF00EEA3E6 /* BestBuyParseData.h */; };
+		42F4670219BE3A80000EE29A /* BestBuyParseData.m in Sources */ = {isa = PBXBuildFile; fileRef = 234DAE2219B8EAEF00EEA3E6 /* BestBuyParseData.m */; };
+		42FA333119BE2A2A004DE52C /* ActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 42FA333019BE2A2A004DE52C /* ActionViewController.m */; };
+		42FA333319BE2A2A004DE52C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42FA333219BE2A2A004DE52C /* MainInterface.storyboard */; };
+		42FA333619BE2A2A004DE52C /* SearchBestBuyAction.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42FA332B19BE2A2A004DE52C /* SearchBestBuyAction.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D1A2E52912DB4EB3804E601F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E41A46AFB7C442D786522DE4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +62,35 @@
 			remoteGlobalIDString = 2355BAD319B794BD0097B84A;
 			remoteInfo = BestBuyIOS;
 		};
+		42FA333419BE2A2A004DE52C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2355BACC19B794BD0097B84A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42FA332A19BE2A2A004DE52C;
+			remoteInfo = SearchBestBuyAction;
+		};
+		42FA333719BE2A2A004DE52C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2355BACC19B794BD0097B84A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42FA332A19BE2A2A004DE52C;
+			remoteInfo = SearchBestBuyAction;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		42FA333C19BE2A2A004DE52C /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				42FA333619BE2A2A004DE52C /* SearchBestBuyAction.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		234DADE319B8BEF500EEA3E6 /* BestBuyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestBuyTableViewController.h; sourceTree = "<group>"; };
@@ -85,6 +130,27 @@
 		2355BB0A19B8BC4A0097B84A /* BestBuySearchViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BestBuySearchViewController.xib; sourceTree = "<group>"; };
 		236A3FDA19BA5C330047EC06 /* BestBuyDetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestBuyDetailedViewController.h; sourceTree = "<group>"; };
 		236A3FDB19BA5C330047EC06 /* BestBuyDetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BestBuyDetailedViewController.m; sourceTree = "<group>"; };
+		42469AC619C2384E00FA8A5C /* BestBuyResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BestBuyResult.m; sourceTree = "<group>"; };
+		42469AC719C2391E00FA8A5C /* BestBuyResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestBuyResult.h; sourceTree = "<group>"; };
+		4269A2E419BE4EA5002F90AB /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		429FC1B519BE4C61009F7067 /* ExtensionIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ExtensionIcon.png; sourceTree = "<group>"; };
+		42A074D519C0FE8400BEFF96 /* BestBuyPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BestBuyPhotoViewController.m; sourceTree = "<group>"; };
+		42A074D719C0FE8C00BEFF96 /* BestBuyPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestBuyPhotoViewController.h; sourceTree = "<group>"; };
+		42A074DB19C1EFFA00BEFF96 /* MyCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionCell.h; sourceTree = "<group>"; };
+		42A074DC19C1EFFA00BEFF96 /* MyCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionCell.m; sourceTree = "<group>"; };
+		42CE3FC119BE49B900D68FDA /* Action.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Action.js; sourceTree = "<group>"; };
+		42EFABC519BF95EA007578BA /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		42EFABC619BF95EA007578BA /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		42EFABC719BF95EA007578BA /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		42EFABC819BF95EA007578BA /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		42EFABCB19BF96CA007578BA /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		42FA332B19BE2A2A004DE52C /* SearchBestBuyAction.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SearchBestBuyAction.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		42FA332E19BE2A2A004DE52C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42FA332F19BE2A2A004DE52C /* ActionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActionViewController.h; sourceTree = "<group>"; };
+		42FA333019BE2A2A004DE52C /* ActionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActionViewController.m; sourceTree = "<group>"; };
+		42FA333219BE2A2A004DE52C /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		E41A46AFB7C442D786522DE4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCCED74174F4F5EB7273D9C /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +173,7 @@
 				2355BADA19B794BD0097B84A /* CoreGraphics.framework in Frameworks */,
 				2355BADC19B794BD0097B84A /* UIKit.framework in Frameworks */,
 				2355BAD819B794BD0097B84A /* Foundation.framework in Frameworks */,
+				D1A2E52912DB4EB3804E601F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +184,14 @@
 				2355BAF119B794BD0097B84A /* XCTest.framework in Frameworks */,
 				2355BAF319B794BD0097B84A /* UIKit.framework in Frameworks */,
 				2355BAF219B794BD0097B84A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		42FA332819BE2A2A004DE52C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42EFABCC19BF96CA007578BA /* libxml2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,8 +227,10 @@
 				2355BADD19B794BD0097B84A /* BestBuyIOS */,
 				2355BAF619B794BD0097B84A /* BestBuyIOSTests */,
 				234DAE0C19B8C38700EEA3E6 /* Specs */,
+				42FA332C19BE2A2A004DE52C /* SearchBestBuyAction */,
 				2355BAD619B794BD0097B84A /* Frameworks */,
 				2355BAD519B794BD0097B84A /* Products */,
+				EFCCED74174F4F5EB7273D9C /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -163,6 +240,7 @@
 				2355BAD419B794BD0097B84A /* BestBuyIOS.app */,
 				2355BAEF19B794BD0097B84A /* BestBuyIOSTests.xctest */,
 				234DAE0719B8C38700EEA3E6 /* Specs.octest */,
+				42FA332B19BE2A2A004DE52C /* SearchBestBuyAction.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,11 +248,14 @@
 		2355BAD619B794BD0097B84A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42EFABCB19BF96CA007578BA /* libxml2.dylib */,
 				2355BAD719B794BD0097B84A /* Foundation.framework */,
 				2355BAD919B794BD0097B84A /* CoreGraphics.framework */,
 				2355BADB19B794BD0097B84A /* UIKit.framework */,
 				2355BAF019B794BD0097B84A /* XCTest.framework */,
 				234DADEE19B8C23600EEA3E6 /* SenTestingKit.framework */,
+				4269A2E419BE4EA5002F90AB /* NotificationCenter.framework */,
+				E41A46AFB7C442D786522DE4 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,15 +269,21 @@
 				2355BADE19B794BD0097B84A /* Supporting Files */,
 				2355BB0619B79A840097B84A /* Main.storyboard */,
 				2355BB0819B8BC4A0097B84A /* BestBuySearchViewController.h */,
-				234DADE319B8BEF500EEA3E6 /* BestBuyTableViewController.h */,
-				234DADE419B8BEF500EEA3E6 /* BestBuyTableViewController.m */,
-				234DAE2119B8EAEF00EEA3E6 /* BestBuyParseData.h */,
-				236A3FDA19BA5C330047EC06 /* BestBuyDetailedViewController.h */,
-				236A3FDB19BA5C330047EC06 /* BestBuyDetailedViewController.m */,
-				234DAE2219B8EAEF00EEA3E6 /* BestBuyParseData.m */,
-				234DADE519B8BEF500EEA3E6 /* BestBuyTableViewController.xib */,
 				2355BB0919B8BC4A0097B84A /* BestBuySearchViewController.m */,
 				2355BB0A19B8BC4A0097B84A /* BestBuySearchViewController.xib */,
+				234DADE319B8BEF500EEA3E6 /* BestBuyTableViewController.h */,
+				234DADE419B8BEF500EEA3E6 /* BestBuyTableViewController.m */,
+				234DADE519B8BEF500EEA3E6 /* BestBuyTableViewController.xib */,
+				236A3FDA19BA5C330047EC06 /* BestBuyDetailedViewController.h */,
+				236A3FDB19BA5C330047EC06 /* BestBuyDetailedViewController.m */,
+				42A074D719C0FE8C00BEFF96 /* BestBuyPhotoViewController.h */,
+				42A074D519C0FE8400BEFF96 /* BestBuyPhotoViewController.m */,
+				234DAE2119B8EAEF00EEA3E6 /* BestBuyParseData.h */,
+				234DAE2219B8EAEF00EEA3E6 /* BestBuyParseData.m */,
+				42469AC619C2384E00FA8A5C /* BestBuyResult.m */,
+				42469AC719C2391E00FA8A5C /* BestBuyResult.h */,
+				42A074DB19C1EFFA00BEFF96 /* MyCollectionCell.h */,
+				42A074DC19C1EFFA00BEFF96 /* MyCollectionCell.m */,
 			);
 			path = BestBuyIOS;
 			sourceTree = "<group>";
@@ -230,6 +317,31 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		42FA332C19BE2A2A004DE52C /* SearchBestBuyAction */ = {
+			isa = PBXGroup;
+			children = (
+				42EFABC519BF95EA007578BA /* HTMLNode.h */,
+				42EFABC619BF95EA007578BA /* HTMLNode.m */,
+				42EFABC719BF95EA007578BA /* HTMLParser.h */,
+				42EFABC819BF95EA007578BA /* HTMLParser.m */,
+				42FA332F19BE2A2A004DE52C /* ActionViewController.h */,
+				42FA333019BE2A2A004DE52C /* ActionViewController.m */,
+				42FA333219BE2A2A004DE52C /* MainInterface.storyboard */,
+				42FA332D19BE2A2A004DE52C /* Supporting Files */,
+			);
+			path = SearchBestBuyAction;
+			sourceTree = "<group>";
+		};
+		42FA332D19BE2A2A004DE52C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				42FA332E19BE2A2A004DE52C /* Info.plist */,
+				42CE3FC119BE49B900D68FDA /* Action.js */,
+				429FC1B519BE4C61009F7067 /* ExtensionIcon.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -249,19 +361,24 @@
 			name = Specs;
 			productName = Specs;
 			productReference = 234DAE0719B8C38700EEA3E6 /* Specs.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		2355BAD319B794BD0097B84A /* BestBuyIOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2355BB0019B794BD0097B84A /* Build configuration list for PBXNativeTarget "BestBuyIOS" */;
 			buildPhases = (
+				B5503A5BA2C54526B0D95908 /* Check Pods Manifest.lock */,
 				2355BAD019B794BD0097B84A /* Sources */,
 				2355BAD119B794BD0097B84A /* Frameworks */,
 				2355BAD219B794BD0097B84A /* Resources */,
+				42FA333C19BE2A2A004DE52C /* Embed App Extensions */,
+				1B04591F3AE9471186555BCE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				42FA333519BE2A2A004DE52C /* PBXTargetDependency */,
+				42FA333819BE2A2A004DE52C /* PBXTargetDependency */,
 			);
 			name = BestBuyIOS;
 			productName = BestBuyIOS;
@@ -286,6 +403,23 @@
 			productReference = 2355BAEF19B794BD0097B84A /* BestBuyIOSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		42FA332A19BE2A2A004DE52C /* SearchBestBuyAction */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42FA333B19BE2A2A004DE52C /* Build configuration list for PBXNativeTarget "SearchBestBuyAction" */;
+			buildPhases = (
+				42FA332719BE2A2A004DE52C /* Sources */,
+				42FA332819BE2A2A004DE52C /* Frameworks */,
+				42FA332919BE2A2A004DE52C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SearchBestBuyAction;
+			productName = SearchBestBuyAction;
+			productReference = 42FA332B19BE2A2A004DE52C /* SearchBestBuyAction.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -296,6 +430,9 @@
 				TargetAttributes = {
 					2355BAEE19B794BD0097B84A = {
 						TestTargetID = 2355BAD319B794BD0097B84A;
+					};
+					42FA332A19BE2A2A004DE52C = {
+						CreatedOnToolsVersion = 6.0;
 					};
 				};
 			};
@@ -314,6 +451,7 @@
 				2355BAD319B794BD0097B84A /* BestBuyIOS */,
 				2355BAEE19B794BD0097B84A /* BestBuyIOSTests */,
 				234DAE0619B8C38700EEA3E6 /* Specs */,
+				42FA332A19BE2A2A004DE52C /* SearchBestBuyAction */,
 			);
 		};
 /* End PBXProject section */
@@ -337,6 +475,7 @@
 				234DADE719B8BEF500EEA3E6 /* BestBuyTableViewController.xib in Resources */,
 				2355BAEA19B794BD0097B84A /* Images.xcassets in Resources */,
 				2355BB0C19B8BC4A0097B84A /* BestBuySearchViewController.xib in Resources */,
+				4251095819C0CE06003F8D7E /* ExtensionIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,9 +487,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42FA332919BE2A2A004DE52C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42CE3FC219BE49B900D68FDA /* Action.js in Resources */,
+				429FC1B619BE4C61009F7067 /* ExtensionIcon.png in Resources */,
+				42FA333319BE2A2A004DE52C /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		1B04591F3AE9471186555BCE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		234DAE0519B8C38700EEA3E6 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -364,6 +528,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		B5503A5BA2C54526B0D95908 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -381,12 +560,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42469ACA19C23CA300FA8A5C /* BestBuyResult.m in Sources */,
 				234DADE619B8BEF500EEA3E6 /* BestBuyTableViewController.m in Sources */,
 				234DAE2319B8EAEF00EEA3E6 /* BestBuyParseData.m in Sources */,
 				2355BAE819B794BD0097B84A /* AppDelegate.m in Sources */,
+				42A074D619C0FE8400BEFF96 /* BestBuyPhotoViewController.m in Sources */,
 				2355BB0B19B8BC4A0097B84A /* BestBuySearchViewController.m in Sources */,
 				2355BAE419B794BD0097B84A /* main.m in Sources */,
 				236A3FDC19BA5C330047EC06 /* BestBuyDetailedViewController.m in Sources */,
+				42A074DD19C1EFFA00BEFF96 /* MyCollectionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +580,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		42FA332719BE2A2A004DE52C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42469ACC19C2427000FA8A5C /* BestBuyResult.h in Sources */,
+				42469ACB19C2425200FA8A5C /* BestBuyResult.m in Sources */,
+				42EFABC919BF95EA007578BA /* HTMLNode.m in Sources */,
+				42F4670219BE3A80000EE29A /* BestBuyParseData.m in Sources */,
+				42F4670119BE3A7D000EE29A /* BestBuyParseData.h in Sources */,
+				42FA333119BE2A2A004DE52C /* ActionViewController.m in Sources */,
+				42EFABCA19BF95EA007578BA /* HTMLParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -405,6 +601,16 @@
 			isa = PBXTargetDependency;
 			target = 2355BAD319B794BD0097B84A /* BestBuyIOS */;
 			targetProxy = 2355BAF419B794BD0097B84A /* PBXContainerItemProxy */;
+		};
+		42FA333519BE2A2A004DE52C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42FA332A19BE2A2A004DE52C /* SearchBestBuyAction */;
+			targetProxy = 42FA333419BE2A2A004DE52C /* PBXContainerItemProxy */;
+		};
+		42FA333819BE2A2A004DE52C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42FA332A19BE2A2A004DE52C /* SearchBestBuyAction */;
+			targetProxy = 42FA333719BE2A2A004DE52C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -520,7 +726,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -552,7 +758,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -560,6 +766,7 @@
 		};
 		2355BB0119B794BD0097B84A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFCCED74174F4F5EB7273D9C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -567,12 +774,14 @@
 				GCC_PREFIX_HEADER = "BestBuyIOS/BestBuyIOS-Prefix.pch";
 				INFOPLIST_FILE = "BestBuyIOS/BestBuyIOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		2355BB0219B794BD0097B84A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EFCCED74174F4F5EB7273D9C /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -580,6 +789,7 @@
 				GCC_PREFIX_HEADER = "BestBuyIOS/BestBuyIOS-Prefix.pch";
 				INFOPLIST_FILE = "BestBuyIOS/BestBuyIOS-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -624,6 +834,48 @@
 			};
 			name = Release;
 		};
+		42FA333919BE2A2A004DE52C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = SearchBestBuyAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		42FA333A19BE2A2A004DE52C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include",
+					"$(SDKROOT)/usr/include/libxml2",
+				);
+				INFOPLIST_FILE = SearchBestBuyAction/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -659,6 +911,15 @@
 			buildConfigurations = (
 				2355BB0419B794BD0097B84A /* Debug */,
 				2355BB0519B794BD0097B84A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42FA333B19BE2A2A004DE52C /* Build configuration list for PBXNativeTarget "SearchBestBuyAction" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				42FA333919BE2A2A004DE52C /* Debug */,
+				42FA333A19BE2A2A004DE52C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

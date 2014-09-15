@@ -7,14 +7,14 @@
 //
 
 #import "BestBuyTableViewController.h"
+#import <AFNetworking/AFJSONRequestOperation.h>
 #include "BestBuyParseData.h"
 #include "BestBuyDetailedViewController.h"
+#include "BestBuyResult.h"
 
 static NSInteger const pageSize = 5;
 
-@interface BestBuyTableViewController ()
 
-@end
 
 @implementation BestBuyTableViewController
 
@@ -33,7 +33,34 @@ static NSInteger const pageSize = 5;
     
     self.pageNumber = 1;
     self.parser = [[BestBuyParseData alloc] init];
-    
+
+    NSString * encodedString = [self.productName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
+    NSString *urlStr = [NSMutableString stringWithFormat:@"http://api.remix.bestbuy.com/v1/products(name=%@*)?show=name,salePrice,image&format=json&pageSize=%i&page=%i&apiKey=vf5ft65skvwfvyd5guj6npef",
+                        encodedString, pageSize, self.pageNumber ];
+    NSURL * url = [NSURL URLWithString:urlStr];
+
+
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+
+    AFJSONRequestOperation * operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSLog(@"Response of getall rooms %@", JSON);
+       self.parser.mainJsonDictionary = JSON;
+        self.resultList = [self.parser parse];
+        if ([self.resultList count] == 0) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Results" message:@"No Results were found" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alert show];
+        }
+        // use resultList to update UI here
+        [self.tableview reloadData];
+
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON){
+        NSLog(@"Error");
+
+    }];
+
+    [operation start];
+    /*
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
 
         NSString * encodedString = [self.productName stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -57,7 +84,7 @@ static NSInteger const pageSize = 5;
 
         });
     });
-    
+    */
     
 }
 
@@ -94,8 +121,10 @@ static NSInteger const pageSize = 5;
     if (nil == cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] ;
     }
-    
-    cell.textLabel.text = [self.resultList objectAtIndex:indexPath.row];
+
+    BestBuyResult * item =[self.resultList objectAtIndex:indexPath.row];
+    cell.textLabel.text = item.name;
+    NSLog(item.name);
     cell.textLabel.font = [UIFont systemFontOfSize:14.0];
     cell.textLabel.numberOfLines = 0;
     cell.textLabel.lineBreakMode = NSLineBreakByWordWrapping;
@@ -132,8 +161,7 @@ static NSInteger const pageSize = 5;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqualToString:@"tableItemToDetailedView"]){
         BestBuyDetailedViewController *detailedViewController = (BestBuyDetailedViewController *)segue.destinationViewController;
-        
-        
+        detailedViewController.imageUrl = self.destURL;
     }
 }
 
@@ -193,9 +221,13 @@ static NSInteger const pageSize = 5;
     
     // Push the view controller.
     //[self.navigationController pushViewController:detailedViewController animated:YES];
-    
+
+
+    BestBuyResult *item = [self.resultList objectAtIndex:indexPath.row];
+    self.destURL = item.imageUrl;
     [self performSegueWithIdentifier:@"tableItemToDetailedView" sender:self];
 }
+
 
 
 @end

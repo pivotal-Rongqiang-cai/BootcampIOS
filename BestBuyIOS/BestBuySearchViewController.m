@@ -29,6 +29,18 @@
     
     // Do any additional setup after loading the view from its nib.
 
+
+    UILocalNotification * localNotification= [[UILocalNotification alloc] init];
+    localNotification.category = @"myNotification";
+    localNotification.alertAction = @"Open App";
+
+    localNotification.alertBody = @"Click to open app, or swipe to see more options";
+
+    localNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow: 6];
+
+    UIApplication *app=[UIApplication sharedApplication];
+    [app scheduleLocalNotification:localNotification];
+
     self.nameTextField.delegate = self;
 }
 
@@ -57,5 +69,13 @@
     [self performSegueWithIdentifier:@"searchButtonSegue" sender:self];
 	return YES;
 }
+
+-(void)willTransitionToTraitCollection:(UITraitCollection *)newCollection
+             withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+
+    NSLog(@"Trait collection = %@", newCollection);
+
+}
+
 
 @end

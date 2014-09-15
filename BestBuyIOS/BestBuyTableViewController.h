@@ -17,5 +17,7 @@
 @property (strong, nonatomic) BestBuyParseData * parser;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
 @property (strong,nonatomic) NSMutableArray * resultList;
+@property (strong, nonatomic) NSMutableArray * imageUrlList;
 
+@property (strong,nonatomic) NSURL * destURL;
 @end

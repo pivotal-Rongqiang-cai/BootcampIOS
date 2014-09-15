@@ -1,5 +1,5 @@
 #import "BestBuyParseData.h"
-
+#import "BestBuyResult.h"
 using namespace Cedar::Matchers;
 using namespace Cedar::Doubles;
 
@@ -15,16 +15,20 @@ describe(@"BestBuyParseData", ^{
         NSString* fileRoot = [[NSBundle mainBundle]
                               pathForResource:filePath ofType:@"txt"];
         NSString* fileContents = @"{\"from\": 1, \"products\": [ { \"name\": \"ADOPTED - Cushion Wrap Case for Apple® iPhone® 5 and 5s - Black/Rose Gold\", \"salePrice\": 39.99 } ] }";
-        NSLog(fileContents);
 
-        myParser.json = [fileContents dataUsingEncoding:NSUTF8StringEncoding];
+        NSLog(fileContents);
+        NSError * error = nil;
+       // NSDictionary * mainJsonDictionary = [NSJSONSerialization JSONObjectWithData : [fileContents dataUsingEncoding:NSUTF8StringEncoding] options: NSJSONReadingMutableContainers error: &error];
+        myParser.mainJsonDictionary = [NSJSONSerialization JSONObjectWithData : [fileContents dataUsingEncoding:NSUTF8StringEncoding] options: NSJSONReadingMutableContainers error: &error];
 
     });
     
     it(@"Parsing JsonStr", ^{
         NSMutableArray * resultList = [myParser parse];
-        [[resultList objectAtIndex:0] isEqualToString:@"ADOPTED - Cushion Wrap Case for Apple® iPhone® 5 and 5s - Black/Rose Gold $39.99"] should be_truthy;
+        BestBuyResult * temp = [resultList objectAtIndex:0];
+        [temp.name isEqualToString:@"ADOPTED - Cushion Wrap Case for Apple® iPhone® 5 and 5s - Black/Rose Gold $39.99"] should be_truthy;
     });
 });
 
 SPEC_END
+    
